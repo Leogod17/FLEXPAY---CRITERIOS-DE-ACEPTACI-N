@@ -1,0 +1,77 @@
+Feature: HU-002 - Preferencias de Idioma
+
+  Como persona tecnologicamente capacitada, quiero cambiar el idioma de FlexPay para personalizar mi experiencia de usuario.
+
+  Scenario Outline: Actualizacion sin errores al cambiar idioma
+    Given El usuario selecciona un nuevo idioma
+    When Realiza el cambio
+    Then Toda la interfaz debe actualizarse sin errores
+
+  Scenario Outline: Cambio de idioma sin reiniciar sesion
+    Given El usuario desea cambiar el idioma
+    When Selecciona otro idioma
+    Then La aplicacion debe actualizarse sin reiniciar sesion
+
+  Scenario Outline: Navegacion completa en el idioma seleccionado
+    Given El usuario cambia el idioma
+    When Navega por FlexPay
+    Then Todo debe estar en el idioma seleccionado  
+
+
+Feature: HU-003 - Personalizacion de Notificaciones
+
+  Como persona tecnologicamente capacitada, quiero personalizar las notificaciones que recibo para estar al tanto solo de lo que me interesa.
+
+  Scenario Outline: Recepcion de notificaciones ajustadas
+    Given El usuario ajusta las notificaciones
+    When Las guarda
+    Then Debe recibir solo aquellas basadas en sus preferencias
+
+  Scenario Outline: Notificacion en tiempo real de transacciones importantes
+    Given Ocurre una transaccion relevante
+    When El usuario la configura como importante
+    Then Debe recibir una notificacion en tiempo real
+
+  Scenario Outline: Reflejo inmediato de cambios en la configuracion de notificaciones
+    Given El usuario cambia la configuracion de notificaciones
+    When Lo hace
+    Then La app debe reflejar los nuevos ajustes inmediatamente
+
+
+Feature: HU-010 - Personalizacion de Funcionalidades Avanzadas
+
+  Como persona tecnologicamente capacitada, quiero acceder a funcionalidades avanzadas para personalizar mi experiencia con FlexPay.
+
+  Scenario Outline: Acceso inmediato a funciones avanzadas
+    Given El usuario habilita funciones avanzadas
+    When Lo hace
+    Then Debe tener acceso inmediato a las nuevas funciones
+
+  Scenario Outline: Personalizacion de funciones reflejada de inmediato
+    Given El usuario desea personalizar las funciones
+    When Realiza cambios
+    Then Los cambios deben reflejarse inmediatamente en su experiencia
+
+  Scenario Outline: Activacion o desactivacion de funciones avanzadas
+    Given El usuario revisa las funciones avanzadas
+    When Lo hace
+    Then Debe poder activar o desactivar opciones segun sus preferencias 
+
+Feature: HU-024 - Personalizacion de Pagina de Pago
+
+  Como comerciante, quiero personalizar la pagina de pago de FlexPay para que coincida con la marca de mi tienda.
+
+  Scenario Outline: Aplicacion de la marca en la pagina de pago
+    Given El comerciante accede a la configuracion de la pagina de pago
+    When Realiza cambios en el diseno
+    Then La pagina debe reflejar la marca de la tienda, incluyendo logo y colores
+
+  Scenario Outline: Visualizacion previa de cambios antes de aplicarlos
+    Given La personalizacion esta completa
+    When El comerciante previsualiza la pagina
+    Then Debe ver los cambios antes de aplicarlos
+
+  Scenario Outline: Visualizacion sin problemas del diseno personalizado por los clientes
+    Given Los cambios han sido aplicados
+    When El cliente accede a la pagina de pago
+    Then Debe ver el diseno personalizado sin problemas
