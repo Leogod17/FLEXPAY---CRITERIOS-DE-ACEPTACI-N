@@ -1,0 +1,78 @@
+Feature: HU-004 - Seguridad Multifactor
+
+  Como persona tecnologicamente capacitada, quiero habilitar la autenticacion multifactor en FlexPay para mejorar la seguridad de mi cuenta.
+
+  Scenario Outline: Codigo de verificacion en dispositivo movil
+    Given El usuario activa la autenticacion multifactor
+    When Inicia sesion
+    Then Debe recibir un codigo en su dispositivo movil para confirmacion
+
+  Scenario Outline: Autenticacion para acciones sensibles
+    Given El usuario realiza una accion sensible
+    When Esta requiere seguridad adicional
+    Then Debe pasar por el proceso de autenticacion multifactor
+
+  Scenario Outline: Revision del estado de autenticacion multifactor
+    Given El usuario desea revisar su configuracion de seguridad
+    When Accede a la seccion correspondiente
+    Then Debe ver si la autenticacion multifactor esta activada o no 
+
+
+Feature: HU-008 - Gestion de Seguridad Personalizada
+
+  Como persona tecnologicamente capacitada, quiero ajustar mis preferencias de seguridad para proteger mi cuenta en FlexPay.
+
+  Scenario Outline: Confirmacion de cambios en la seguridad
+    Given El usuario accede a la configuracion de seguridad
+    When Ajusta sus preferencias
+    Then Debe recibir una confirmacion de que los cambios han sido guardados correctamente
+
+  Scenario Outline: Medidas de seguridad aplicadas a acciones de alto riesgo
+    Given El usuario realiza una accion de alto riesgo
+    When Lo hace
+    Then Se deben aplicar las medidas de seguridad adicionales configuradas
+
+  Scenario Outline: Revision y ajuste de preferencias de seguridad
+    Given El usuario desea revisar o ajustar sus preferencias
+    When Accede a la configuracion
+    Then Debe ver una lista clara de sus opciones de seguridad
+
+
+Feature: HU-028 - Control de Fraude
+
+  Como comerciante, quiero disponer de herramientas para detectar y controlar transacciones fraudulentas para proteger mi negocio.
+
+  Scenario Outline: Alerta de transacciones sospechosas
+    Given El sistema de control de fraude esta activo
+    When Se detecta una transaccion sospechosa
+    Then El comerciante debe recibir una alerta inmediata
+
+  Scenario Outline: Revision manual de transacciones sospechosas
+    Given El comerciante revisa la transaccion sospechosa
+    When La analiza
+    Then Debe poder aprobar o rechazar la transaccion con base en los detalles proporcionados
+
+  Scenario Outline: Registro de acciones tomadas en transacciones fraudulentas
+    Given Una transaccion es clasificada como fraudulenta
+    When El comerciante finaliza la revision
+    Then Debe registrarse un historial completo de las acciones tomadas
+
+
+Feature: HU-037 - Seguridad de los Datos
+
+  Como profesional de ciberseguridad, quiero asegurarme de que los datos en FlexPay esten protegidos contra accesos no autorizados y brechas de seguridad.
+
+  Scenario Outline: Cifrado de datos en reposo y en transito
+    Given Los datos sensibles estan almacenados
+    When Se revisa la base de datos
+    Then Los datos deben estar cifrados tanto en reposo como en transito
+
+  Scenario Outline: Verificacion de credenciales y permisos de acceso
+    Given Un usuario accede a la aplicacion
+    When Se autentica
+    Then El sistema debe verificar sus credenciales y permisos para garantizar el acceso solo a datos autorizados
+
+  Scenario Outline: Pruebas de vulnerabilidad
+    Given Se realizan pruebas de seguridad
+    When Se evalua la aplicacion
+    Then No deben encontrarse vulnerabilidades criticas que pongan en riesgo los datos
