@@ -1,0 +1,78 @@
+Feature: HU-018 - Integracion con POS
+
+  Como comerciante, quiero integrar FlexPay con mi sistema POS para aceptar pagos en criptomonedas y monedas tradicionales.
+
+  Scenario Outline: Procesamiento de pagos y actualizacion automatica del inventario
+    Given La integracion esta activa
+    When Se realiza una venta
+    Then El sistema POS debe procesar los pagos y actualizar el inventario automaticamente
+
+  Scenario Outline: Sincronizacion correcta de ajustes entre POS y FlexPay
+    Given El comerciante ajusta la integracion
+    When Realiza cambios
+    Then El sistema POS y FlexPay deben sincronizarse sin errores
+
+  Scenario Outline: Confirmacion en tiempo real de las transacciones
+    Given Se completa una venta
+    When Se procesa el pago
+    Then El sistema POS debe recibir confirmacion de la transaccion en tiempo real
+
+
+Feature: HU-027 - Soporte para Transacciones Internacionales
+
+  Como comerciante, quiero aceptar pagos en multiples monedas internacionales para atender a mi clientela global.
+
+  Scenario Outline: Conversion automatica de divisas en el proceso de pago
+    Given El comerciante habilita pagos en diferentes monedas
+    When Un cliente realiza un pago
+    Then La conversion debe realizarse automaticamente a la tasa de cambio actual
+
+  Scenario Outline: Configuracion de monedas aceptadas
+    Given El comerciante configura las monedas aceptadas
+    When Realiza cambios
+    Then Estas opciones deben reflejarse en el proceso de pago
+
+  Scenario Outline: Confirmacion de transacciones internacionales en la moneda correcta
+    Given Una transaccion internacional se completa
+    When El comerciante la revisa
+    Then Debe recibir una confirmacion detallada de la transaccion en la moneda utilizada
+
+
+Feature: HU-033 - Configuracion de Metodos de Pago Alternativos
+
+  Como comerciante, quiero ofrecer metodos de pago alternativos en FlexPay para dar mas opciones a mis clientes.
+
+  Scenario Outline: Disponibilidad de metodos de pago alternativos en FlexPay
+    Given El comerciante desea anadir metodos de pago
+    When Selecciona las opciones
+    Then Estas deben estar disponibles para los clientes en la pagina de pago
+
+  Scenario Outline: Funcionamiento correcto de los metodos de pago alternativos
+    Given Se agregan nuevos metodos de pago
+    When Se configuran
+    Then Deben ser visibles para los clientes y funcionar correctamente
+
+  Scenario Outline: Pruebas de funcionamiento de metodos de pago
+    Given El comerciante desea probar los metodos de pago
+    When Se realizan pruebas
+    Then Estos deben procesar las transacciones sin errores
+
+
+Feature: HU-025 - Configuracion de Promociones
+
+  Como comerciante, quiero configurar promociones y descuentos en FlexPay para atraer a mas clientes.
+
+  Scenario Outline: Creacion de ofertas con detalles personalizables
+    Given El comerciante esta en la seccion de promociones
+    When Crea una nueva oferta
+    Then Debe poder definir los detalles, como el porcentaje de descuento y fechas de vigencia
+
+  Scenario Outline: Aplicacion automatica de descuentos al total de la compra
+    Given La promocion esta activa
+    When Un cliente realiza una compra
+    Then El descuento debe aplicarse automaticamente al total
+
+  Scenario Outline: Confirmacion de la aplicacion de la promocion en la transaccion final
+    Given El cliente aplica un descuento
+    When La transaccion se completa
+    Then Debe recibir una confirmacion que refleje la aplicacion de la promocion
