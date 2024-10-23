@@ -1,0 +1,117 @@
+Feature: HU-005 - Gestion del Historial de Transacciones
+
+  Como persona tecnologicamente capacitada, quiero revisar mi historial de transacciones para tener control de mis gastos y pagos.
+
+  Scenario Outline: Visualizacion del historial por periodo seleccionado
+    Given El usuario selecciona un periodo
+    When Lo hace
+    Then Debe ver un historial completo de sus transacciones en ese intervalo
+
+  Scenario Outline: Filtro y actualizacion del historial
+    Given El usuario aplica un filtro
+    When Lo hace
+    Then El historial debe actualizarse para mostrar solo las transacciones que coinciden con el filtro
+
+  Scenario Outline: Exportacion del historial en CSV o PDF
+    Given El usuario desea guardar el historial
+    When Selecciona exportar
+    Then Debe poder descargarlo en formatos como CSV o PDF Feature: HU-005 - Gestion del Historial de Transacciones
+
+
+Feature: HU-020 - Opciones de Pago en Criptomonedas
+
+  Como comerciante, quiero ofrecer multiples opciones de pago en criptomonedas para dar flexibilidad a mis clientes.
+
+  Scenario Outline: Seleccion de criptomonedas habilitadas
+    Given El comerciante habilita varias criptomonedas
+    When Un cliente paga
+    Then Debe poder seleccionar entre las criptomonedas disponibles
+
+  Scenario Outline: Generacion de direccion de pago correcta para criptomonedas
+    Given Se selecciona una criptomoneda
+    When Un cliente paga
+    Then El sistema debe generar una direccion de pago especifica con el monto correspondiente
+
+  Scenario Outline: Reflejo de ajustes de opciones de criptomonedas en el proceso de pago
+    Given El comerciante ajusta las opciones de criptomonedas
+    When Realiza cambios
+    Then Las nuevas opciones deben reflejarse en el proceso de pago 
+
+
+Feature: HU-021 - Soporte para Pagos de Alto Valor
+
+  Como comerciante, quiero que FlexPay soporte pagos de alto valor en criptomonedas para gestionar grandes transacciones de manera segura.
+
+  Scenario Outline: Procesamiento de pagos hasta el limite configurado
+    Given El comerciante configura un limite de transaccion
+    When Se realiza una transaccion
+    Then El sistema debe permitir pagos hasta el monto configurado
+
+  Scenario Outline: Revision manual de transacciones que superen el limite
+    Given La transaccion supera el limite configurado
+    When Se realiza
+    Then Debe pasar por una revision manual o ser rechazada por razones de seguridad
+
+  Scenario Outline: Aplicacion automatica del nuevo limite a transacciones futuras
+    Given El comerciante ajusta el limite de transaccion
+    When Realiza cambios
+    Then El nuevo limite debe aplicarse automaticamente a las transacciones futuras
+
+
+Feature: HU-022 - Conciliaciones Diarias
+
+  Como comerciante, quiero realizar conciliaciones diarias de mis transacciones en criptomonedas para asegurar que todos los pagos se registren correctamente.
+
+  Scenario Outline: Generacion de informe detallado de conciliacion diaria
+    Given El comerciante solicita una conciliacion diaria
+    When Se genera el informe
+    Then Debe incluir un desglose de todas las transacciones realizadas durante el dia
+
+  Scenario Outline: Comparacion entre los registros de FlexPay y los de ventas diarias
+    Given El informe de conciliacion esta disponible
+    When El comerciante lo revisa
+    Then Debe comparar los registros de FlexPay con los registros de ventas diarias
+
+  Scenario Outline: Ajuste o reporte de discrepancias identificadas
+    Given Se encuentran discrepancias en la conciliacion
+    When El comerciante las identifica
+    Then Debe poder reportarlas o ajustarlas para su correccion
+
+Feature: HU-023 - Gestion de Reembolsos
+
+  Como comerciante, quiero gestionar solicitudes de reembolsos en FlexPay para procesar devoluciones de manera eficiente.
+
+  Scenario Outline: Aprobacion o rechazo de solicitudes de reembolso
+    Given Un cliente solicita un reembolso
+    When El comerciante inicia el proceso
+    Then Debe ingresar la informacion requerida y aprobar o rechazar la solicitud
+
+  Scenario Outline: Actualizacion automatica del estado de la transaccion tras el reembolso
+    Given El reembolso es aprobado
+    When Se procesa
+    Then El estado de la transaccion debe actualizarse para reflejar el reembolso
+
+  Scenario Outline: Notificacion de confirmacion tras el procesamiento del reembolso
+    Given El reembolso ha sido procesado
+    When Se completa
+    Then Tanto el comerciante como el cliente deben recibir una notificacion de confirmacion
+
+
+Feature: HU-026 - Historial de Transacciones de Comercio
+
+  Como comerciante, quiero revisar el historial de transacciones de mi comercio para analizar el rendimiento de mi negocio.
+
+  Scenario Outline: Visualizacion del historial por periodo seleccionado
+    Given El comerciante accede al historial de transacciones
+    When Selecciona un periodo de tiempo especifico
+    Then Debe ver un desglose detallado de todas las ventas realizadas durante ese periodo
+
+  Scenario Outline: Filtros aplicables para transacciones segun monto o tipo de pago
+    Given El comerciante desea filtrar las transacciones
+    When Aplica filtros (como monto o tipo de pago)
+    Then El historial debe actualizarse con los resultados correspondientes
+
+  Scenario Outline: Exportacion del historial en formatos como CSV o PDF
+    Given El comerciante desea exportar el historial
+    When Selecciona la opcion de exportar
+    Then Debe poder descargar los resultados en formatos como CSV o PDF
