@@ -1,0 +1,158 @@
+Feature: HU-001 - Acceso Multicanal
+
+  Como persona tecnologicamente capacitada, quiero acceder a FlexPay desde multiples dispositivos para gestionar mis fondos en cualquier lugar.
+
+  Scenario Outline: Acceso sin perdida de informacion
+    Given El usuario ha iniciado sesion en FlexPay desde movil o web
+    When El usuario accede a FlexPay desde otro dispositivo
+    Then El sistema debe permitir acceso sin perdida de informacion
+
+  Scenario Outline: Sincronizacion de cambios entre dispositivos
+    Given El usuario realiza cambios en un dispositivo
+    When El usuario accede desde otro dispositivo
+    Then Los cambios deben estar sincronizados entre dispositivos
+
+  Scenario Outline: Ajuste automatico de la interfaz segun la resolucion
+    Given El usuario accede desde un dispositivo con diferente resolucion
+    When Navega por FlexPay
+    Then La interfaz debe ajustarse automaticamente a la resolucion del dispositivo
+
+
+Feature: HU-011 - Interaccion con la API
+
+  Como persona tecnologicamente capacitada, quiero interactuar con la API de FlexPay para integrarla con otras herramientas.
+
+  Scenario Outline: Consulta de documentacion clara de la API
+    Given El usuario accede a la API
+    When Consulta la documentacion
+    Then Debe encontrar informacion clara sobre como interactuar con la API
+
+  Scenario Outline: Recepcion de datos correctos al usar la API
+    Given El usuario realiza una solicitud de datos a la API
+    When Lo hace
+    Then Debe recibir la informacion solicitada en el formato adecuado
+
+  Scenario Outline: Mensaje de error detallado al fallar la API
+    Given Ocurre un error en la API
+    When El usuario realiza una solicitud fallida
+    Then Debe recibir un mensaje de error detallado que explique el problema
+
+
+Feature: HU-012 - Optimizacion para Conexiones Lentas
+
+  Como persona tecnologicamente capacitada, quiero que FlexPay funcione eficientemente en conexiones lentas para mantener la accesibilidad.
+
+  Scenario Outline: Carga eficiente de datos en conexiones lentas
+    Given El usuario esta en una conexion lenta
+    When Accede a FlexPay
+    Then Los datos deben cargarse eficientemente sin tiempos de espera excesivos
+
+  Scenario Outline: Optimizacion de recursos en redes lentas
+    Given La conexion es lenta
+    When El usuario navega por la aplicacion
+    Then La aplicacion debe optimizar el uso de recursos para mejorar el rendimiento
+
+  Scenario Outline: Cumplimiento de estandares en redes lentas
+    Given Se realizan pruebas en conexiones lentas
+    When Se prueba la aplicacion
+    Then Debe cumplir con los estandares de rendimiento aceptables en estas condiciones
+
+
+Feature: HU-017 - Optimizacion de Procesamiento en Dispositivos Moviles
+
+  Como persona tecnologicamente capacitada, quiero que FlexPay optimice el procesamiento en dispositivos moviles para mejorar el rendimiento y la eficiencia del uso de la bateria.
+
+  Scenario Outline: Optimizacion de CPU
+    Given El usuario usa un dispositivo movil
+    When Accede a FlexPay
+    Then La aplicacion debe reducir el uso del procesador para ahorrar bateria
+
+  Scenario Outline: Optimizacion de graficos
+    Given El dispositivo tiene capacidades limitadas
+    When El usuario navega
+    Then Las animaciones y graficos deben ajustarse para mejorar la eficiencia
+
+  Scenario Outline: Uso de recursos
+    Given El usuario tiene multiples aplicaciones abiertas
+    When Accede a FlexPay
+    Then Debe funcionar sin afectar significativamente otros procesos del dispositivo
+
+
+Feature: HU-003 - Personalizacion de Notificaciones
+
+  Como persona tecnologicamente capacitada, quiero personalizar las notificaciones que recibo para estar al tanto solo de lo que me interesa.
+
+  Scenario Outline: Recepcion de notificaciones ajustadas
+    Given El usuario ajusta las notificaciones
+    When Las guarda
+    Then Debe recibir solo aquellas basadas en sus preferencias
+
+  Scenario Outline: Notificacion en tiempo real de transacciones importantes
+    Given Ocurre una transaccion relevante
+    When El usuario la configura como importante
+    Then Debe recibir una notificacion en tiempo real
+
+  Scenario Outline: Reflejo inmediato de cambios en la configuracion de notificaciones
+    Given El usuario cambia la configuracion de notificaciones
+    When Lo hace
+    Then La app debe reflejar los nuevos ajustes inmediatamente
+
+
+Feature: HU-015 - Soporte para Dispositivos de Bajo Rendimiento
+
+  Como persona tecnologicamente capacitada, quiero que FlexPay funcione en dispositivos de bajo rendimiento para garantizar el acceso a la aplicacion.
+
+  Scenario Outline: Funcionamiento sin problemas en dispositivos de bajo rendimiento
+    Given El usuario esta utilizando un dispositivo de bajo rendimiento
+    When Accede a FlexPay
+    Then La aplicacion debe funcionar sin problemas y sin tiempos de espera excesivos
+
+  Scenario Outline: Interfaz simple y eficiente para dispositivos de bajo rendimiento
+    Given El dispositivo es de bajo rendimiento
+    When El usuario navega por la aplicacion
+    Then La interfaz debe ser lo suficientemente simple para no consumir demasiados recursos
+
+  Scenario Outline: Cumplimiento de estandares en dispositivos de bajo rendimiento
+    Given Se realiza una prueba en dispositivos de bajo rendimiento
+    When Se prueba la aplicacion
+    Then Debe cumplir con los estandares de funcionalidad y rendimiento
+
+
+Feature: HU-039 - Rendimiento en Conexiones Lentas
+
+  Como desarrollador, quiero asegurarme de que FlexPay funcione adecuadamente en conexiones lentas para mejorar la accesibilidad en condiciones de red suboptimas.
+
+  Scenario Outline: Carga eficiente de la aplicacion en conexiones lentas
+    Given El usuario esta en una conexion lenta
+    When Accede a FlexPay
+    Then La aplicacion debe cargar de manera eficiente, con tiempos de espera minimos
+
+  Scenario Outline: Minimizacion de datos transferidos para mejorar la velocidad
+    Given La conexion es lenta
+    When El usuario navega por la aplicacion
+    Then Los datos transferidos deben ser minimizados para mejorar la velocidad de respuesta
+
+  Scenario Outline: Cumplimiento de estandares de rendimiento en conexiones lentas
+    Given Se realizan pruebas en conexiones lentas
+    When Se prueba la aplicacion
+    Then Debe cumplir con los estandares de rendimiento aceptables en estas condiciones 
+
+
+Feature: HU-040 - Mantenimiento Preventivo de la Aplicacion
+
+  Como desarrollador, quiero que FlexPay implemente un sistema de mantenimiento preventivo para asegurar el funcionamiento continuo y evitar fallos en el rendimiento.
+
+  Scenario Outline: Planificacion de mantenimiento regular
+    Given El equipo de desarrollo planifica el mantenimiento
+    When Se define una fecha para el mantenimiento preventivo
+    Then Los usuarios deben recibir una notificacion con antelacion sobre la ventana de mantenimiento
+
+  Scenario Outline: Monitoreo del rendimiento durante el mantenimiento
+    Given El mantenimiento preventivo esta en curso
+    When El sistema sigue operando en modo limitado
+    Then El rendimiento debe ser monitoreado en tiempo real para identificar cualquier fallo o problema
+
+  Scenario Outline: Respuesta rapida a problemas detectados
+    Given Se detecta un problema durante el mantenimiento
+    When El sistema lo identifica
+    Then El equipo de soporte debe recibir una alerta inmediata para resolver el problema rapidamente
