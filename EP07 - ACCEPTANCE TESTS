@@ -1,0 +1,78 @@
+Feature: HU-007 - Actualizaciones Automaticas
+
+  Como persona tecnologicamente capacitada, quiero que FlexPay se actualice automaticamente para siempre estar al dia con las ultimas mejoras.
+
+  Scenario Outline: Instalacion automatica de actualizaciones
+    Given Hay una nueva actualizacion
+    When El dispositivo esta conectado a internet
+    Then La actualizacion debe instalarse automaticamente
+
+  Scenario Outline: Notificacion de actualizacion al abrir la app
+    Given El usuario abre la aplicacion despues de una actualizacion
+    When Lo hace
+    Then Debe recibir una notificacion informandole que esta usando la ultima version
+
+  Scenario Outline: Uso sin errores tras la actualizacion
+    Given La actualizacion se ha instalado
+    When El usuario utiliza cualquier funcion
+    Then No debe haber errores derivados de la actualizacion
+
+
+Feature: HU-019 - Exportacion de Informes
+
+  Como comerciante, quiero exportar informes de ventas en formato CSV o PDF para realizar analisis detallados y compartir datos.
+
+  Scenario Outline: Seleccion de formato de exportacion
+    Given El comerciante esta en la seccion de informes
+    When Selecciona exportar
+    Then Debe poder elegir entre formatos CSV o PDF
+
+  Scenario Outline: Visualizacion correcta de los detalles del informe exportado
+    Given El informe esta exportado
+    When El comerciante abre el archivo
+    Then Debe ver un desglose de todas las transacciones, incluyendo montos y fechas
+
+  Scenario Outline: Reflejo de ventas por periodo en el informe exportado
+    Given El comerciante selecciona un periodo de tiempo especifico
+    When Exporta el informe
+    Then Debe reflejar todas las ventas realizadas en ese periodo
+
+
+Feature: HU-030 - Manejo de Cargos por Servicios
+
+  Como comerciante, quiero gestionar cargos adicionales por servicios en FlexPay para incluir tarifas de transaccion o costos adicionales.
+
+  Scenario Outline: Configuracion de tarifas adicionales en las transacciones
+    Given El comerciante esta en la seccion de cargos
+    When Configura tarifas adicionales
+    Then Estas deben aplicarse automaticamente a las transacciones correspondientes
+
+  Scenario Outline: Visualizacion de los cargos adicionales en la pagina de pago
+    Given Los cargos estan configurados
+    When El cliente realiza una compra
+    Then Debe ver los cargos adicionales detallados en la pagina de pago
+
+  Scenario Outline: Aplicacion automatica de ajustes de cargos en transacciones futuras
+    Given El comerciante ajusta los cargos
+    When Realiza cambios
+    Then Estos deben aplicarse automaticamente a las transacciones futuras 
+
+
+Feature: HU-032 - Configuracion de Limites de Transaccion
+
+  Como comerciante, quiero establecer limites de transaccion en FlexPay para gestionar el riesgo y controlar el tamano de las transacciones.
+
+  Scenario Outline: Definicion de limites de transaccion en FlexPay
+    Given El comerciante configura un limite de transaccion
+    When El limite esta establecido
+    Then Debe aplicarse automaticamente a todas las transacciones
+
+  Scenario Outline: Notificacion de transacciones que exceden el limite
+    Given Una transaccion excede el limite establecido
+    When Se procesa
+    Then El comerciante debe recibir una notificacion de que la transaccion esta bloqueada o pendiente de revision
+
+  Scenario Outline: Aplicacion automatica de ajustes de limites a transacciones futuras
+    Given El comerciante desea cambiar el limite de transaccion
+    When Realiza ajustes
+    Then Los nuevos limites deben aplicarse automaticamente a las transacciones futuras
