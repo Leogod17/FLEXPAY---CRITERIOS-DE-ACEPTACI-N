@@ -1,0 +1,98 @@
+Feature: HU-006 - Busqueda de Transacciones Avanzada
+
+  Como persona tecnologicamente capacitada, quiero realizar busquedas avanzadas en FlexPay para encontrar rapidamente las transacciones que necesito.
+
+  Scenario Outline: Resultados coincidentes con los terminos de busqueda
+    Given El usuario ingresa terminos especificos en la busqueda
+    When Lo hace
+    Then Debe ver resultados que coincidan con sus terminos
+
+  Scenario Outline: Actualizacion de resultados en tiempo real con filtros
+    Given El usuario ajusta los filtros
+    When Lo hace
+    Then Los resultados deben actualizarse en tiempo real
+
+  Scenario Outline: Sugerencias cuando no hay resultados
+    Given El usuario realiza una busqueda sin resultados
+    When Esto ocurre
+    Then Debe recibir un mensaje y sugerencias para refinar la busqueda 
+
+
+Feature: HU-014 - Actualizacion de Datos de Usuario
+
+  Como persona tecnologicamente capacitada, quiero actualizar mis datos personales en FlexPay para mantener mi informacion correcta.
+
+  Scenario Outline: Guardado correcto de cambios en los datos
+    Given El usuario accede a la seccion de perfil
+    When Actualiza sus datos personales
+    Then Los cambios deben guardarse correctamente y reflejarse en su perfil
+
+  Scenario Outline: Visualizacion de la informacion actualizada sin errores
+    Given Los datos se han modificado
+    When El usuario revisa su perfil
+    Then Debe ver la informacion actualizada sin errores
+
+  Scenario Outline: Confirmacion de cambios en los datos
+    Given El usuario guarda los cambios
+    When Lo hace
+    Then Debe recibir una confirmacion indicando que los datos se han actualizado correctamente
+
+
+Feature: HU-031 - Gestion de Perfiles de Vendedores
+
+  Como comerciante, quiero gestionar los perfiles de mis vendedores en FlexPay para coordinar pagos y comisiones de manera eficiente.
+
+  Scenario Outline: Creacion de perfiles de vendedores en FlexPay
+    Given El comerciante esta en la seccion de gestion de vendedores
+    When Crea un nuevo perfil
+    Then Debe ingresar los detalles necesarios y guardarlos correctamente en el sistema
+
+  Scenario Outline: Visualizacion de historial de ventas y comisiones
+    Given El comerciante revisa un perfil de vendedor
+    When Lo hace
+    Then Debe ver el historial de ventas y las comisiones acumuladas de ese vendedor
+
+  Scenario Outline: Actualizacion de informacion del perfil del vendedor
+    Given El comerciante necesita actualizar la informacion de un perfil
+    When Lo edita
+    Then Los cambios deben reflejarse de inmediato en el sistema
+
+
+Feature: HU-034 - Acceso a Datos de Cliente
+
+  Como comerciante, quiero acceder a los datos de mis clientes en FlexPay para realizar analisis y personalizar mis servicios.
+
+  Scenario Outline: Acceso a historial de compras y preferencias del cliente
+    Given El comerciante desea acceder a los datos de sus clientes
+    When Selecciona la opcion de consulta
+    Then Debe poder ver el historial de compras y preferencias del cliente
+
+  Scenario Outline: Cumplimiento con las normativas de privacidad y proteccion de datos
+    Given El comerciante accede a los datos
+    When Visualiza la informacion
+    Then Debe cumplir con las normativas de privacidad y proteccion de datos
+
+  Scenario Outline: Exportacion de datos de clientes en CSV o PDF
+    Given El comerciante desea analizar los datos
+    When Selecciona la opcion de exportar
+    Then Debe poder descargar los datos en formatos como CSV o PDF
+
+
+Feature: HU-038 - Compatibilidad con Navegadores
+
+  Como desarrollador, quiero asegurarme de que FlexPay sea compatible con los principales navegadores web para proporcionar una experiencia uniforme a todos los usuarios.
+
+  Scenario Outline: Pruebas en Chrome, Firefox, Safari y Edge
+    Given Se realizan pruebas en diferentes navegadores
+    When Se prueba la aplicacion en Chrome, Firefox, Safari y Edge
+    Then Debe funcionar correctamente y mostrar el contenido de manera consistente
+
+  Scenario Outline: Resolucion de problemas identificados en navegadores
+    Given Se encuentran problemas en algun navegador
+    When Estos son identificados
+    Then Deben ser solucionados para garantizar que la aplicacion funcione sin errores en todos los navegadores
+
+  Scenario Outline: Adaptacion de la interfaz en distintos navegadores
+    Given La aplicacion esta disponible en varios navegadores
+    When Se navega por la aplicacion
+    Then La interfaz debe adaptarse adecuadamente a las caracteristicas de cada navegado
