@@ -1,0 +1,98 @@
+Feature: HU-013 - Soporte en Linea
+
+  Como persona tecnologicamente capacitada, quiero tener acceso a soporte en linea para resolver problemas tecnicos rapidamente.
+
+  Scenario Outline: Acceso a soporte adecuado (chat o email)
+    Given El usuario esta en la seccion de soporte
+    When Solicita ayuda
+    Then Debe ser dirigido a un canal adecuado (chat en vivo, correo electronico)
+
+  Scenario Outline: Respuesta en menos de 24 horas
+    Given El usuario ha enviado una solicitud de soporte
+    When Se recibe
+    Then Debe recibir una respuesta en menos de 24 horas
+
+  Scenario Outline: Solucion detallada o guia para resolver el problema
+    Given El soporte ha respondido
+    When El usuario describe su problema
+    Then Debe recibir una solucion detallada o una guia para resolverlo
+
+
+Feature: HU-029 - Acceso a Soporte Especializado
+
+  Como comerciante, quiero acceso a soporte especializado para resolver problemas tecnicos o de integracion de manera eficiente.
+
+  Scenario Outline: Asignacion de especialistas a las solicitudes de soporte
+    Given El comerciante solicita soporte especializado
+    When Envia una solicitud
+    Then Debe ser asignado a un especialista que pueda ayudar a resolver su problema
+
+  Scenario Outline: Respuesta en menos de 24 horas
+    Given El comerciante ha enviado una solicitud
+    When Se recibe
+    Then Debe obtener una respuesta inicial en menos de 24 horas
+
+  Scenario Outline: Provision de guia detallada para resolver el problema
+    Given El soporte ha respondido
+    When El comerciante describe su problema
+    Then Debe recibir una guia detallada para resolverlo
+
+
+Feature: HU-036 - Escalabilidad de la Aplicacion
+
+  Como desarrollador, quiero asegurarme de que FlexPay pueda escalar para soportar un aumento en el numero de usuarios y transacciones.
+
+  Scenario Outline: Pruebas de carga para garantizar escalabilidad
+    Given Se realizan pruebas de carga
+    When Se simula un aumento en el numero de usuarios y transacciones
+    Then La aplicacion debe manejar la carga sin disminuir su rendimiento
+
+  Scenario Outline: Monitoreo del uso de CPU y memoria
+    Given La aplicacion esta en uso
+    When Se monitorean los recursos del sistema
+    Then El uso de CPU y memoria debe mantenerse dentro de los limites aceptables durante picos de trafico
+
+  Scenario Outline: Optimizacion de consultas bajo alta carga
+    Given Se realizan consultas a la base de datos
+    When Estas se ejecutan bajo alta carga
+    Then Las consultas deben estar optimizadas para responder dentro de un tiempo razonable
+
+
+Feature: HU-035 - Actualizacion de Terminos y Condiciones
+
+  Como comerciante, quiero actualizar los terminos y condiciones de uso en FlexPay para mantener a los clientes informados sobre las politicas de mi negocio.
+
+  Scenario Outline: Reflejo de los terminos y condiciones actualizados en FlexPay
+    Given El comerciante actualiza los terminos y condiciones
+    When Realiza cambios
+    Then Estos deben reflejarse en la seccion correspondiente de FlexPay
+
+  Scenario Outline: Notificacion de cambios a los clientes
+    Given Se actualizan los terminos
+    When Los clientes acceden a FlexPay
+    Then Deben recibir una notificacion informandoles de los cambios
+
+  Scenario Outline: Aceptacion de los nuevos terminos por parte de los clientes
+    Given Los terminos y condiciones han sido modificados
+    When Un cliente realiza una transaccion
+    Then Debe aceptar los nuevos terminos antes de proceder 
+
+
+Feature: HU-016 - Registro de Actividades de Usuario
+
+  Como persona tecnologicamente capacitada, quiero que FlexPay registre mis actividades para poder revisar mi uso y las transacciones que he realizado.
+
+  Scenario Outline: Registro automatico de acciones en el historial
+    Given El usuario realiza una actividad en la aplicacion
+    When Completa la accion
+    Then Esta debe registrarse automaticamente en el historial de actividades
+
+  Scenario Outline: Visualizacion completa del historial de actividades
+    Given El usuario desea revisar su historial de actividades
+    When Accede al registro
+    Then Debe ver un listado completo de todas las acciones realizadas
+
+  Scenario Outline: Exportacion del registro en CSV o PDF
+    Given El usuario desea exportar el registro
+    When Selecciona la opcion de exportar
+    Then Debe poder descargar el historial en formatos como CSV o PDF
