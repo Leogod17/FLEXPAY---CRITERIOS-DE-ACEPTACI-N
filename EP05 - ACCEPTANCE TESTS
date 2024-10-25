@@ -20,7 +20,7 @@ Feature: HU-013 - Soporte en Linea
 
 Feature: HU-029 - Acceso a Soporte Especializado
 
-  Como comerciante, quiero acceso a soporte especializado para resolver problemas tecnicos o de integracion de manera eficiente.
+  Como comerciante, quiero acceso a soporte especializado para resolver problemas tecnicos o de integración de manera eficiente.
 
   Scenario Outline: Asignacion de especialistas a las solicitudes de soporte
     Given El comerciante solicita soporte especializado
