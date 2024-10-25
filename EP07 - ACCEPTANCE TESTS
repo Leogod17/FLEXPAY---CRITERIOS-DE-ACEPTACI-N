@@ -10,7 +10,7 @@ Feature: HU-007 - Actualizaciones Automaticas
   Scenario Outline: Notificacion de actualizacion al abrir la app
     Given El usuario abre la aplicacion despues de una actualizacion
     When Lo hace
-    Then Debe recibir una notificacion informandole que esta usando la ultima version
+    Then Debe recibir una notificación informandole que esta usando la ultima version
 
   Scenario Outline: Uso sin errores tras la actualizacion
     Given La actualizacion se ha instalado
