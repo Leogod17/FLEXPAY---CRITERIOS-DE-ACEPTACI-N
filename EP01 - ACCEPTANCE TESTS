@@ -38,7 +38,7 @@ Feature: HU-003 - Personalización de Notificaciones
     Then La app debe reflejar los nuevos ajustes inmediatamente
 
 
-Feature: HU-010 - Personalizacion de Funcionalidades Avanzadas
+Feature: HU-010 - Personalización de Funcionalidades Avanzadas
 
   Como persona tecnologicamente capacitada, quiero acceder a funcionalidades avanzadas para personalizar mi experiencia con FlexPay.
 
