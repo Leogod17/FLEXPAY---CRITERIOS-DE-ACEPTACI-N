@@ -5,7 +5,7 @@ Feature: HU-001 - Acceso Multicanal
   Scenario Outline: Acceso sin perdida de informacion
     Given El usuario ha iniciado sesion en FlexPay desde movil o web
     When El usuario accede a FlexPay desde otro dispositivo
-    Then El sistema debe permitir acceso sin perdida de informacion
+    Then El sistema debe permitir acceso sin perdida de información
 
   Scenario Outline: Sincronizacion de cambios entre dispositivos
     Given El usuario realiza cambios en un dispositivo
