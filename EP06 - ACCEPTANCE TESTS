@@ -58,7 +58,7 @@ Feature: HU-033 - Configuracion de Metodos de Pago Alternativos
     Then Estos deben procesar las transacciones sin errores
 
 
-Feature: HU-025 - Configuracion de Promociones
+Feature: HU-025 - Configuración de Promociones
 
   Como comerciante, quiero configurar promociones y descuentos en FlexPay para atraer a mas clientes.
 
