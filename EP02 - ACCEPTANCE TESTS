@@ -18,7 +18,7 @@ Feature: HU-004 - Seguridad Multifactor
     Then Debe ver si la autenticacion multifactor esta activada o no 
 
 
-Feature: HU-008 - Gestion de Seguridad Personalizada
+Feature: HU-008 - Gestión de Seguridad Personalizada
 
   Como persona tecnologicamente capacitada, quiero ajustar mis preferencias de seguridad para proteger mi cuenta en FlexPay.
 
