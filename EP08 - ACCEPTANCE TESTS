@@ -7,7 +7,7 @@ Feature: HU-006 - Busqueda de Transacciones Avanzada
     When Lo hace
     Then Debe ver resultados que coincidan con sus terminos
 
-  Scenario Outline: Actualizacion de resultados en tiempo real con filtros
+  Scenario Outline: Actualización de resultados en tiempo real con filtros
     Given El usuario ajusta los filtros
     When Lo hace
     Then Los resultados deben actualizarse en tiempo real
