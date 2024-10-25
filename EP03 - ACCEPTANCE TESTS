@@ -7,7 +7,7 @@ Feature: HU-005 - Gestion del Historial de Transacciones
     When Lo hace
     Then Debe ver un historial completo de sus transacciones en ese intervalo
 
-  Scenario Outline: Filtro y actualizacion del historial
+  Scenario Outline: Filtro y actualización del historial
     Given El usuario aplica un filtro
     When Lo hace
     Then El historial debe actualizarse para mostrar solo las transacciones que coinciden con el filtro
