@@ -12,7 +12,7 @@ Feature: HU-004 - Seguridad Multifactor
     When Esta requiere seguridad adicional
     Then Debe pasar por el proceso de autenticacion multifactor
 
-  Scenario Outline: Revision del estado de autenticacion multifactor
+  Scenario Outline: Revision del estado de autenticación multifactor
     Given El usuario desea revisar su configuracion de seguridad
     When Accede a la seccion correspondiente
     Then Debe ver si la autenticacion multifactor esta activada o no 
