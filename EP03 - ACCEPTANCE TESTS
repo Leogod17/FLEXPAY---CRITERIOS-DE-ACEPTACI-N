@@ -62,7 +62,7 @@ Feature: HU-022 - Conciliaciones Diarias
 
   Como comerciante, quiero realizar conciliaciones diarias de mis transacciones en criptomonedas para asegurar que todos los pagos se registren correctamente.
 
-  Scenario Outline: Generacion de informe detallado de conciliacion diaria
+  Scenario Outline: Generación de informe detallado de conciliacion diaria
     Given El comerciante solicita una conciliacion diaria
     When Se genera el informe
     Then Debe incluir un desglose de todas las transacciones realizadas durante el dia
