@@ -7,7 +7,7 @@ Feature: HU-018 - Integracion con POS
     When Se realiza una venta
     Then El sistema POS debe procesar los pagos y actualizar el inventario automaticamente
 
-  Scenario Outline: Sincronizacion correcta de ajustes entre POS y FlexPay
+  Scenario Outline: Sincronización correcta de ajustes entre POS y FlexPay
     Given El comerciante ajusta la integracion
     When Realiza cambios
     Then El sistema POS y FlexPay deben sincronizarse sin errores
