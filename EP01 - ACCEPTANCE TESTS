@@ -18,7 +18,7 @@ Feature: HU-002 - Preferencias de Idioma
     Then Todo debe estar en el idioma seleccionado  
 
 
-Feature: HU-003 - Personalizacion de Notificaciones
+Feature: HU-003 - Personalización de Notificaciones
 
   Como persona tecnologicamente capacitada, quiero personalizar las notificaciones que recibo para estar al tanto solo de lo que me interesa.
 
