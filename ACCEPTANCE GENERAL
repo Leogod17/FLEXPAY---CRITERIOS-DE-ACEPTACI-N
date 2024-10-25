@@ -5,7 +5,7 @@ Feature: Gestion de Tests de Aceptacion en FlexPay
   Scenario Outline: Proceso de prueba de una funcionalidad de FlexPay
     Given Un <tipo_de_usuario> accede a la funcionalidad de <nombre_funcionalidad> en FlexPay
     When Se realiza una accion relacionada con <criterio_de_aceptacion>
-    Then El sistema debe responder correctamente segun los criterios de aceptacion
+    Then El sistema debe responder correctamente segun los criterios de aceptación
 
     Examples:
       | tipo_de_usuario           | nombre_funcionalidad      | criterio_de_aceptacion                                        |
